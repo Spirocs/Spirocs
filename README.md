@@ -42,4 +42,3 @@ Currently exploring **Python, React, and full-stack vibes** — always looking f
 
 ### 📫 Let’s Connect
 - GitHub: [@Spirocs](https://github.com/Spirocs)  
-- (Add LinkedIn/Twitter if you want later)

@@ -20,6 +20,8 @@ Currently exploring **Python, React, and full-stack vibes** — always looking f
 **Databases:** MySQL, SQLite  
 **Other:** Docker, REST APIs, Git, Linux
 
+### Language Stats
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Spirocs&layout=compact&langs_count=8&hide_border=1&theme=tokyonight)
 ---
 
 ## 🌟 Featured Project

@@ -1,1 +1,275 @@
-Hello World
+<!doctype html>
+<html lang="de" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Spirocs — Portfolio</title>
+  <meta name="description" content="Ich baue schnelle, saubere Web-Apps, kleine APIs und Minecraft-Plugins. Fokus auf klare Demos und pragmatische Lösungen." />
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class' };
+  </script>
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27%3E%3Ctext y=%2718%27 font-size=%2718%27%3ES%3C/text%3E%3C/svg%3E">
+  <style>
+    .glass { backdrop-filter: blur(8px); background-color: rgba(24,24,27,.65) }
+  </style>
+</head>
+<body class="bg-white text-zinc-900 antialiased dark:bg-zinc-900 dark:text-zinc-100">
+  <!-- Topbar -->
+  <header class="sticky top-0 z-50 border-b border-zinc-200/70 bg-white/70 backdrop-blur dark:border-zinc-800/70 dark:bg-zinc-900/70">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
+      <a href="#home" class="flex items-center gap-2 font-semibold">
+        <i data-lucide="terminal-square" class="w-5 h-5"></i> Spirocs
+      </a>
+      <nav class="hidden gap-6 md:flex text-sm">
+        <a href="#projects" class="hover:underline">Projects</a>
+        <a href="#services" class="hover:underline">Services</a>
+        <a href="#skills" class="hover:underline">Skills</a>
+        <a href="#about" class="hover:underline">About</a>
+        <a href="#contact" class="hover:underline">Contact</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <button id="themeBtn" class="rounded-xl border border-zinc-200 p-2 dark:border-zinc-700">
+          <i data-lucide="sun" class="w-4 h-4 hidden dark:block"></i>
+          <i data-lucide="moon" class="w-4 h-4 dark:hidden"></i>
+        </button>
+        <a href="https://github.com/Spirocs" target="_blank" class="rounded-xl border border-zinc-200 p-2 dark:border-zinc-700">
+          <i data-lucide="github" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="bg-gradient-to-b from-zinc-50 to-white py-20 dark:from-zinc-950 dark:to-zinc-900">
+    <div class="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-6 md:grid-cols-2">
+      <div>
+        <h1 class="text-4xl font-extrabold tracking-tight md:text-5xl">
+          Nikolaj <span class="text-zinc-400">/</span> Spirocs
+        </h1>
+        <p class="mt-3 text-lg text-zinc-700 dark:text-zinc-300">Web & Plugin Developer · Germany / Remote</p>
+        <p class="mt-6 max-w-xl text-zinc-600 dark:text-zinc-400">
+          Ich baue schnelle, saubere Web-Apps, kleine APIs und Minecraft-Plugins. Fokus auf klare Demos, sauberen Code und pragmatische Lösungen.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center gap-3">
+          <a href="#projects" class="inline-flex items-center gap-2 rounded-2xl bg-zinc-900 px-4 py-2 text-sm font-medium text-white hover:bg-zinc-800 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-100">
+            <i data-lucide="rocket" class="w-4 h-4"></i> Projekte anschauen
+          </a>
+          <a href="mailto:contact@spirocs.com" class="inline-flex items-center gap-2 rounded-2xl border border-zinc-200 px-4 py-2 text-sm font-medium text-zinc-800 hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-200 dark:hover:bg-zinc-800">
+            <i data-lucide="mail" class="w-4 h-4"></i> Kontakt
+          </a>
+        </div>
+        <div class="mt-6 flex flex-wrap items-center gap-2 text-xs text-zinc-500 dark:text-zinc-400">
+          <span class="inline-flex items-center rounded-full border border-zinc-200 px-3 py-1 dark:border-zinc-700"><i data-lucide="map-pin" class="w-3 h-3 mr-1"></i> Germany / Remote</span>
+          <span class="inline-flex items-center rounded-full border border-zinc-200 px-3 py-1 dark:border-zinc-700"><i data-lucide="code-2" class="w-3 h-3 mr-1"></i> React / Java / APIs</span>
+          <span class="inline-flex items-center rounded-full border border-zinc-200 px-3 py-1 dark:border-zinc-700"><i data-lucide="sparkles" class="w-3 h-3 mr-1"></i> Hireable</span>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="aspect-video w-full overflow-hidden rounded-3xl border border-zinc-200 bg-gradient-to-tr from-zinc-100 to-white shadow-sm dark:border-zinc-800 dark:from-zinc-900 dark:to-zinc-800 flex items-center justify-center">
+          <i data-lucide="terminal-square" class="w-24 h-24 text-zinc-300 dark:text-zinc-600"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-20">
+    <div class="mx-auto max-w-6xl px-6">
+      <h2 class="text-3xl font-bold">Ausgewählte Projekte</h2>
+      <p class="mt-2 text-zinc-600 dark:text-zinc-400">Klein, schnell, funktionssicher – mit Fokus auf Live-Demos.</p>
+
+      <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+        <!-- Project 1 -->
+        <article class="rounded-3xl border border-zinc-200 bg-white p-5 shadow-sm transition hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900">
+          <div class="flex items-start justify-between">
+            <h3 class="text-lg font-semibold">WTF Weather (FastAPI + React)</h3>
+            <div class="flex gap-2">
+              <a href="https://spirocs.com/demo/wtf-weather" target="_blank" class="rounded-xl border border-zinc-200 p-2 dark:border-zinc-700" aria-label="Live">
+                <i data-lucide="globe" class="w-4 h-4"></i>
+              </a>
+              <a href="https://github.com/Spirocs/wtf-weather" target="_blank" class="rounded-xl border border-zinc-200 p-2 dark:border-zinc-700" aria-label="Code">
+                <i data-lucide="github" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+          <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">Kostenfreie Open-Meteo-Integration mit lustigen Texten & Outfit-Advisor. Publish-ready ohne API Keys.</p>
+          <div class="mt-4 flex flex-wrap gap-2 text-xs">
+            <span class="border px-2 py-1 rounded dark:border-zinc-700">React</span>
+            <span class="border px-2 py-1 rounded dark:border-zinc-700">Vite</span>
+            <span class="border px-2 py-1 rounded dark:border-zinc-700">Tailwind</span>
+            <span class="border px-2 py-1 rounded dark:border-zinc-700">FastAPI</span>
+          </div>
+          <ul class="mt-4 list-disc list-inside text-sm text-zinc-600 dark:text-zinc-400">
+            <li>Deterministische Texte</li><li>Zero-Key Open-Meteo</li><li>SSR-ready</li>
+          </ul>
+          <div class="mt-5">
+            <a href="https://spirocs.com/demo/wtf-weather" target="_blank" class="inline-flex items-center gap-2 text-sm font-medium hover:underline">
+              Details ansehen <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="rounded-3xl border border-zinc-200 bg-white p-5 shadow-sm transition hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900">
+          <div class="flex items-start justify-between">
+            <h3 class="text-lg font-semibold">MC Plugin — Utility (WIP)</h3>
+            <a href="https://github.com/Spirocs/mc-plugin-utility" target="_blank" class="rounded-xl border border-zinc-200 p-2 dark:border-zinc-700" aria-label="Code">
+              <i data-lucide="github" class="w-4 h-4"></i>
+            </a>
+          </div>
+          <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">Kleines Minecraft-Plugin mit einer Kernfunktion. Zeigt Java-Know-how & Paper-API-Verständnis.</p>
+          <div class="mt-4 flex flex-wrap gap-2 text-xs">
+            <span class="border px-2 py-1 rounded dark:border-zinc-700">Java</span>
+            <span class="border px-2 py-1 rounded dark:border-zinc-700">Paper API</span>
+          </div>
+          <ul class="mt-4 list-disc list-inside text-sm text-zinc-600 dark:text-zinc-400">
+            <li>Saubere Commands</li><li>WIP – iterativ ausgebaut</li>
+          </ul>
+          <div class="mt-5">
+            <a href="https://github.com/Spirocs/mc-plugin-utility" target="_blank" class="inline-flex items-center gap-2 text-sm font-medium hover:underline">
+              Details ansehen <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="rounded-3xl border border-zinc-200 bg-white p-5 shadow-sm transition hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900">
+          <div class="flex items-start justify-between">
+            <h3 class="text-lg font-semibold">Minimal Portfolio Boilerplate</h3>
+            <div class="flex gap-2">
+              <a href="https://spirocs.com/" target="_blank" class="rounded-xl border border-zinc-200 p-2 dark:border-zinc-700" aria-label="Live">
+                <i data-lucide="globe" class="w-4 h-4"></i>
+              </a>
+              <a href="https://github.com/Spirocs/Spirocs" target="_blank" class="rounded-xl border border-zinc-200 p-2 dark:border-zinc-700" aria-label="Code">
+                <i data-lucide="github" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+          <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">Dieses Portfolio selbst – leicht zu hosten auf GitHub Pages, sauber strukturiert, Dark-Mode inklusive.</p>
+          <div class="mt-4 flex flex-wrap gap-2 text-xs">
+            <span class="border px-2 py-1 rounded dark:border-zinc-700">HTML</span>
+            <span class="border px-2 py-1 rounded dark:border-zinc-700">Tailwind (CDN)</span>
+            <span class="border px-2 py-1 rounded dark:border-zinc-700">Lucide</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-20 bg-zinc-50 dark:bg-zinc-950">
+    <div class="mx-auto max-w-6xl px-6">
+      <h2 class="text-3xl font-bold">Services</h2>
+      <p class="mt-2 text-zinc-600 dark:text-zinc-400">Was ich shippe – ohne Blabla, mit klaren Ergebnissen.</p>
+      <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div class="rounded-3xl border border-zinc-200 bg-white p-5 dark:border-zinc-800 dark:bg-zinc-900">
+          <h3 class="font-semibold">Landing Pages & Portfolios</h3>
+          <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Schnelle, konvertierende Seiten – SEO-grundsolide, responsive, sauberer Code.</p>
+        </div>
+        <div class="rounded-3xl border border-zinc-200 bg-white p-5 dark:border-zinc-800 dark:bg-zinc-900">
+          <h3 class="font-semibold">Mini-APIs & Integrationen</h3>
+          <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Webhooks, Cronjobs, kleine Backends – pragmatisch & wartbar.</p>
+        </div>
+        <div class="rounded-3xl border border-zinc-200 bg-white p-5 dark:border-zinc-800 dark:bg-zinc-900">
+          <h3 class="font-semibold">Automation & Scripting</h3>
+          <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Daten-Importe, Scraper, CLI-Tools – Fokus: Zuverlässigkeit & Logs.</p>
+        </div>
+        <div class="rounded-3xl border border-zinc-200 bg-white p-5 dark:border-zinc-800 dark:bg-zinc-900">
+          <h3 class="font-semibold">Game Plugins (Paper/Spigot)</h3>
+          <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Quality-of-Life-Plugins, Commands, Listener, Configs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-20">
+    <div class="mx-auto max-w-6xl px-6">
+      <h2 class="text-3xl font-bold">Skills</h2>
+      <p class="mt-2 text-zinc-600 dark:text-zinc-400">Tech, mit der ich täglich arbeite oder schnell anlernen kann.</p>
+      <div class="mt-6 flex flex-wrap gap-2 text-xs">
+        <span class="border px-3 py-1 rounded dark:border-zinc-700">JavaScript/TypeScript</span>
+        <span class="border px-3 py-1 rounded dark:border-zinc-700">React / Vite</span>
+        <span class="border px-3 py-1 rounded dark:border-zinc-700">TailwindCSS</span>
+        <span class="border px-3 py-1 rounded dark:border-zinc-700">Node.js</span>
+        <span class="border px-3 py-1 rounded dark:border-zinc-700">Python</span>
+        <span class="border px-3 py-1 rounded dark:border-zinc-700">Java (Paper API)</span>
+        <span class="border px-3 py-1 rounded dark:border-zinc-700">REST APIs</span>
+        <span class="border px-3 py-1 rounded dark:border-zinc-700">Docker Basics</span>
+        <span class="border px-3 py-1 rounded dark:border-zinc-700">GitHub Actions</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-20 bg-zinc-50 dark:bg-zinc-950">
+    <div class="mx-auto max-w-6xl px-6 grid md:grid-cols-3 gap-6">
+      <div class="md:col-span-2">
+        <h2 class="text-3xl font-bold">Über mich</h2>
+        <p class="mt-3 text-zinc-700 dark:text-zinc-300">
+          Hey, ich bin Nikolaj – online aka <strong>Spirocs</strong>. Ich liebe kleine, saubere Lösungen, die wirklich genutzt werden.
+          Ich arbeite pragmatisch, schreibe klare Readmes und liefere Demos, die man anklicken kann.
+        </p>
+        <p class="mt-3 text-zinc-700 dark:text-zinc-300">
+          Anspruch: lieber ein simples Feature <em>heute</em> shippen, als in drei Wochen Over-Engineering. Wenn’s wächst, refactoren wir.
+        </p>
+      </div>
+      <div class="space-y-3">
+        <div class="rounded-2xl border border-zinc-200 p-4 text-sm dark:border-zinc-800">
+          <div class="flex items-center gap-2 text-zinc-700 dark:text-zinc-300"><i data-lucide="mail" class="w-4 h-4"></i> contact@spirocs.com</div>
+          <div class="mt-2 flex items-center gap-2 text-zinc-700 dark:text-zinc-300"><i data-lucide="github" class="w-4 h-4"></i> <a class="hover:underline" href="https://github.com/Spirocs" target="_blank">GitHub</a></div>
+          <div class="mt-2 flex items-center gap-2 text-zinc-700 dark:text-zinc-300"><i data-lucide="globe" class="w-4 h-4"></i> <a class="hover:underline" href="https://spirocs.com" target="_blank">Website</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20">
+    <div class="mx-auto max-w-6xl px-6">
+      <h2 class="text-3xl font-bold">Kontakt</h2>
+      <p class="mt-2 text-zinc-600 dark:text-zinc-400">Sag kurz Hallo und was du brauchst – ich antworte zeitnah.</p>
+      <div class="mt-6 flex flex-wrap items-center gap-3">
+        <a href="mailto:contact@spirocs.com?subject=Anfrage%20%E2%80%A2%20Spirocs&body=Hi%20Nikolaj,%0D%0A%0D%0Akurz%20zu%20meinem%20Projekt:" class="inline-flex items-center gap-2 rounded-2xl bg-zinc-900 px-4 py-2 font-medium text-white hover:bg-zinc-800 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-100">
+          <i data-lucide="mail" class="w-4 h-4"></i> E-Mail schreiben
+        </a>
+        <a href="https://github.com/Spirocs" target="_blank" class="inline-flex items-center gap-2 rounded-2xl border border-zinc-200 px-4 py-2 font-medium text-zinc-800 hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-200 dark:hover:bg-zinc-800">
+          <i data-lucide="github" class="w-4 h-4"></i> GitHub ansehen
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-zinc-200 py-10 text-sm dark:border-zinc-800">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 md:flex-row">
+      <p class="text-zinc-500 dark:text-zinc-400">© <span id="year"></span> Spirocs. Alle Rechte vorbehalten.</p>
+      <div class="flex items-center gap-3 text-zinc-600 dark:text-zinc-400">
+        <a href="https://github.com/Spirocs" target="_blank" class="hover:text-zinc-900 dark:hover:text-white flex items-center gap-1"><i data-lucide="github" class="w-4 h-4"></i> GitHub</a>
+        <a href="mailto:contact@spirocs.com" class="hover:text-zinc-900 dark:hover:text-white flex items-center gap-1"><i data-lucide="mail" class="w-4 h-4"></i> Mail</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Icons rendern
+    lucide.createIcons();
+    // Jahr im Footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Dark-Mode Toggle + Persistenz
+    const btn = document.getElementById('themeBtn');
+    const root = document.documentElement;
+    const saved = localStorage.getItem('theme');
+    if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) root.classList.add('dark');
+    btn.addEventListener('click', () => {
+      root.classList.toggle('dark');
+      localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light');
+      lucide.createIcons(); // for swapped sun/moon visibility
+    });
+  </script>
+</body>
+</html>

@@ -90,7 +90,7 @@
             <div>> <span id="tty"></span><span class="animate-pulse">▍</span></div>
             </div>
         </div>
-        </div>
+      </div>
     </div>
   </section>
 
@@ -108,7 +108,7 @@
             <div class="flex gap-2">
               <!-- If you add a live demo later, put the URL below and remove the comment -->
               <!-- <a href="https://spirocs.com/demo/wtf-weather" target="_blank" class="rounded-xl border border-zinc-200 p-2 dark:border-zinc-700" aria-label="Live"><i data-lucide='globe' class='w-4 h-4'></i></a> -->
-              <a href="https://github.com/Spirocs/wtf-weather" target="_blank" class="rounded-xl border border-zinc-200 p-2 dark:border-zinc-700" aria-label="Code">
+              <a href="https://github.com/Spirocs/cool-weather" target="_blank" class="rounded-xl border border-zinc-200 p-2 dark:border-zinc-700" aria-label="Code">
                 <i data-lucide="github" class="w-4 h-4"></i>
               </a>
             </div>
@@ -150,7 +150,7 @@
         <article class="rounded-3xl border border-zinc-200 bg-white p-5 shadow-sm transition hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900">
           <div class="flex items-start justify-between">
             <h3 class="text-lg font-semibold">MC Plugin — Utility (WIP)</h3>
-            <a href="https://github.com/Spirocs/mc-plugin-utility" target="_blank" class="rounded-xl border border-zinc-200 p-2 dark:border-zinc-700" aria-label="Code">
+            <a href="https://github.com/Spirocs/DiscordBridge" target="_blank" class="rounded-xl border border-zinc-200 p-2 dark:border-zinc-700" aria-label="Code">
               <i data-lucide="github" class="w-4 h-4"></i>
             </a>
           </div>
@@ -260,7 +260,7 @@
   <section id="contact" class="py-20">
     <div class="mx-auto max-w-6xl px-6">
       <h2 class="text-3xl font-bold">Contact</h2>
-      <p class="mt-2 text-zinc-600 dark:text-zinc-400">Drop a quick hello and what you need — I reply fast.</p>
+      <p class="mt-2 text-zinc-600 dark:text-zinc-400">Drop a quick hello and what you need, I reply fast.</p>
       <div class="mt-6 flex flex-wrap items-center gap-3">
         <a href="mailto:contact@spirocs.com?subject=Inquiry%20%E2%80%A2%20Spirocs&body=Hi%20Nikolaj,%0D%0A%0D%0AProject%20goal:%0D%0AScope%20(3%20bullets):%0D%0ADeadline%20%26%20budget:%0D%0ARefs/links:%0D%0A" class="inline-flex items-center gap-2 rounded-2xl bg-zinc-900 px-4 py-2 font-medium text-white hover:bg-zinc-800 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-100">
           <i data-lucide="mail" class="w-4 h-4"></i> Email me
@@ -436,10 +436,10 @@
         if (!el) return;
         let i=0, j=0, erase=false;
         function tick(){
-        const s = lines[i];
-        if (!erase) { j++; if (j<=s.length) el.textContent = s.slice(0,j); else { erase=true; setTimeout(tick, 1000); return; } }
-        else { j--; if (j>=0) el.textContent = s.slice(0,j); else { erase=false; i=(i+1)%lines.length; } }
-        setTimeout(tick, erase ? 25 : 40);
+            const s = lines[i];
+            if (!erase) { j++; if (j<=s.length) el.textContent = s.slice(0,j); else { erase=true; setTimeout(tick, 1000); return; } }
+            else { j--; if (j>=0) el.textContent = s.slice(0,j); else { erase=false; i=(i+1)%lines.length; } }
+            setTimeout(tick, erase ? 25 : 40);
         }
         tick();
     })();

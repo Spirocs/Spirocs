@@ -7,7 +7,7 @@ Currently exploring **Python, React, and full-stack vibes** — always looking f
 
 ## 🚀 What I Do
 - 🖥️ Full-Stack Dev (Python / FastAPI / React / Node.js)
-- ⚡ Side projects with humor & tech (check out [WTF Weather](https://github.com/Spirocs/wtf-weather-starter))
+- ⚡ Side projects with humor & tech
 - 🧑‍🎓 Background: Application Development
 - 🌍 Interested in remote work, digital nomad life & global dev culture
 
@@ -25,7 +25,7 @@ Currently exploring **Python, React, and full-stack vibes** — always looking f
 ---
 
 ## 🌟 Featured Project
-[![WTF Weather](https://github-readme-stats.vercel.app/api/pin/?username=Spirocs&repo=wtf-weather-starter&theme=tokyonight)](https://github.com/Spirocs/wtf-weather-starter)
+[![WTF Weather](https://github-readme-stats.vercel.app/api/pin/?username=Spirocs&repo=cool-weather&theme=tokyonight)](https://github.com/Spirocs/cool-weather)
 
 ---
 
